@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Python</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <h1>🎮 Kuis Python</h1>
+        <p class="subtitle">✨ Jawab pertanyaan untuk mengklaim kotak! ✨</p>
+        
+        <div class="score-board">
+            <div class="score-item">
+                <div class="score-label">💎 Skor Anda</div>
+                <div class="score-value" id="score">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">📊 Progress</div>
+                <div class="score-value" id="answered">0/9</div>
+            </div>
+        </div>
+        
+        <div class="grid" id="grid">
+            <button class="cell" data-index="0">1</button>
+            <button class="cell" data-index="1">2</button>
+            <button class="cell" data-index="2">3</button>
+            <button class="cell" data-index="3">4</button>
+            <button class="cell" data-index="4">5</button>
+            <button class="cell" data-index="5">6</button>
+            <button class="cell" data-index="6">7</button>
+            <button class="cell" data-index="7">8</button>
+            <button class="cell" data-index="8">9</button>
+        </div>
+        
+        <div class="final-message" id="finalMessage">
+            <h2>🎉 Selesai!</h2>
+            <p id="finalScore"></p>
+            <button class="restart-btn" onclick="location.reload()">🔄 Main Lagi</button>
+        </div>
+    </div>
+    
+    <div class="question-modal" id="modal">
+        <div class="question-box">
+            <div class="question-number" id="questionNumber"></div>
+            <div class="question-text" id="questionText"></div>
+            <div class="options" id="options"></div>
+            <div class="feedback" id="feedback"></div>
+            <button class="next-btn" id="nextBtn">Lanjut ➜</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
